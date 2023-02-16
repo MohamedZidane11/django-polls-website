@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+{% if latest_questions %}
+    <ul>
+        {% for question in latest_questions %}
+            <li><a href='/polls/{{question.id}}'><b>{{question.question_text}}</b></a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You don't have any Question. Please add some!</p>
+{% endif %}
+
+
+</body>
+</html>
