@@ -4,17 +4,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-5.0.2-dist/css/bootstrap.min.css' %}"/>
+    <link href="{% static 'polls/bootstrap-5.0.2-dist/css/sticky-footer-navbar.css' %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
     <title>Title</title>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
 
-<hr>
-<h1>Welou Development!</h1>
-<hr>
-{% block main_content %}
-{% endblock %}
-{% include 'polls/footer.html'%}
+    {% include 'polls/header.html' %}
 
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container">
+
+        {% block main_content %}
+        {% endblock %}
+
+      </div>
+    </main>
+    {% include 'polls/footer.html' %}
 </body>
 </html>

@@ -14,8 +14,10 @@
     <label for="choice{{forloop.counter}}"> {{choice.choice_text}} </label><br>
     {% endfor %}
 
-    <input type="submit" value="vote"/>
+    <input class="btn btn-success" type="submit" value="vote"/>
 </form>
+
+<a href="{% url 'polls:index' %}"><-- Back to questions</a>
 
 <!--<ul>-->
 <!--    {% for choice in question.choice_set.all %}-->
